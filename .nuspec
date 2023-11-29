@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>YayaSoft.SumatraPDF</id>
+		<title>YayaSoft.SumatraPDF</title>
+        <version>1.0.1</version>
+        <description>SumatraPDF</description>
+        <authors>Denis Azamatov</authors>
+    </metadata>
+	<files>
+		<file src=".\SumatraPDF-3.5.2-32.exe" target="executable" />
+		<file src=".\YayaSoft.SumatraPDF.targets" target="build" />
+		<file src=".\DefinePropertiesSumatraPDF.targets" target="build" />
+  </files>
+</package>

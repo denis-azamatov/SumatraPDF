@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SumatraPDFName >SumatraPDF-3.5.2-32.exe</SumatraPDFName>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SumatraPDFSrcPath Condition=" '$(SumatraPDFSrcPath)' == '' ">$(MSBuildThisFileDirectory)..\executable\$(SumatraPDFName)</SumatraPDFSrcPath>
+    <SumatraPDFTargetPath Condition=" '$(SumatraPDFTargetPath)' == '' ">$(TargetDir)</SumatraPDFTargetPath>
+  </PropertyGroup>
+
+  <ItemGroup >
+    <None Include="$(SumatraPDFSrcPath)">
+      <Link>$(SumatraPDFName)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </None>
+  </ItemGroup>
+</Project>
